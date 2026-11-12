@@ -1,0 +1,37 @@
+<div class="app-container">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Planeja</span>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a class="menu-item active" [routerLink]="['/paginas']">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a class="menu-item" [routerLink]="['/paginas/listagem-cartoes']">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Cartões de Crédito</span>
+            </a>
+            <a class="menu-item" [routerLink]="['/paginas/listagem-categorias']">
+                <i class="fa-solid fa-tags"></i>
+                <span>Categorias</span>
+            </a>
+            <a class="menu-item" [routerLink]="['/paginas/listagem-lancamentos']">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <span>Lançamentos</span>
+            </a>
+            <a class="menu-item" (click)="sair()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+        </nav>
+
+    </aside>
+        <!-- Conteúdo principal -->
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
